@@ -6,10 +6,24 @@
   var rounds = checkPositiveInt(prompt('How many rounds?'));
   window.alert('You have initiated a draft table with '+ drafters + ' and ' + rounds + ' rounds!');
   var tablehead = "<table style='width: 100%'";
+  var arrayCounter;
+
   for (var x=0; x <= drafters; x++ ){
+    tablehead += '<th>'+x+'</th>';
+    arrayCounter++;
+  }
+
+  for (var y=0; y <= rounds; y++) {
+    tablehead.appendChild(document.createElement('p'));
+  }
+
+
+
+
+  document.write(tablehead);
+  for (var x=0; x <= rounds; x++ ){
     tablehead += '<th>'+x+'</th>'
   }
-  document.write(tablehead);
 //}
 
 //loops to verify drafters and rounds are positive integers

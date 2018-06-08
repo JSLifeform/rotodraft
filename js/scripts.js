@@ -5,25 +5,36 @@
   var drafters = checkPositiveInt(prompt('How many drafters?'));
   var rounds = checkPositiveInt(prompt('How many rounds?'));
   window.alert('You have initiated a draft table with '+ drafters + ' and ' + rounds + ' rounds!');
-  var tablehead = "<table style='width: 100%'";
+  const tableHeadCreate = document.createElement('th');
   var arrayCounter;
-
-  for (var x=0; x <= drafters; x++ ){
-    tablehead += '<th>'+x+'</th>';
-    arrayCounter++;
+  var tableHead;
+  const table = document.getElementById('draftTable');
+  for (i = 0; i < drafters; i++){
+    tableHead = document.createElement('th');
+    tableHead.textContent = i + 1;
+    table.appendChild(tableHead);
   }
 
-  for (var y=0; y <= rounds; y++) {
-    tablehead.appendChild(document.createElement('p'));
-  }
 
 
-
-
-  document.write(tablehead);
-  for (var x=0; x <= rounds; x++ ){
-    tablehead += '<th>'+x+'</th>'
-  }
+  // var tableHeadEdit = document.getElementsByTagName('th');
+  // for (i = 0; i < drafters; i++){
+  //   tableHeadEdit[i].contentText = i + 1;
+  // }
+  // for (var x=0; x <= drafters; x++ ){
+  //   tablehead += '<th>'+x+'</th>';
+  //   arrayCounter++;
+  // }
+  //
+  // for (var y=0; y <= rounds; y++) {
+  //   tablehead.appendChild(document.createElement('p'));
+  //   rounds.setAttribute('id', y);
+  // }
+  //
+  //
+  //
+  //
+  // document.write(tablehead);
 //}
 
 //loops to verify drafters and rounds are positive integers

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
+  <title>Rotisserie Draft Tracker</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
@@ -16,7 +16,18 @@
 </head>
 
 <body>
+  <div class = 'bannerContainer'>
+   <header class = "mainHeader">
+     <h1 class = "headerTitle">Rotisserie Cube Draft</h1>
+     <div id = 'inputBox'>
+      <label>Enter card name here:</label>
+      <input type = 'text' id = 'submitCard'></input>
+      <button type = 'submit'>Submit</button>
+     </div>
+   </header>
+ </div>
   <table id='draftTable' border = '1px' width = '100%'></table>
+  <script src = 'js/jquery-3.3.1.min.js'></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

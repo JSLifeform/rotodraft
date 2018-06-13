@@ -4,38 +4,39 @@
   //calls in number of drafters and rounds
   var drafters = checkPositiveInt(prompt('How many drafters?'));
   var rounds = checkPositiveInt(prompt('How many rounds?'));
-  window.alert('You have initiated a draft table with '+ drafters + ' and ' + rounds + ' rounds!');
+  var $inputBox = $('#inputBox');
+//  window.alert('You have initiated a draft table with '+ drafters + ' and ' + rounds + ' rounds!');
   const tableHeadCreate = document.createElement('th');
   var arrayCounter;
   var tableHead;
   const table = document.getElementById('draftTable');
+  //create table head
   for (i = 0; i < drafters; i++){
     tableHead = document.createElement('th');
     tableHead.textContent = i + 1;
     table.appendChild(tableHead);
   }
-
-
-
-  // var tableHeadEdit = document.getElementsByTagName('th');
-  // for (i = 0; i < drafters; i++){
-  //   tableHeadEdit[i].contentText = i + 1;
-  // }
-  // for (var x=0; x <= drafters; x++ ){
-  //   tablehead += '<th>'+x+'</th>';
-  //   arrayCounter++;
-  // }
-  //
-  // for (var y=0; y <= rounds; y++) {
-  //   tablehead.appendChild(document.createElement('p'));
-  //   rounds.setAttribute('id', y);
-  // }
-  //
-  //
-  //
-  //
-  // document.write(tablehead);
+  //create table rows
+  for (i = 0; i < rounds; i++){
+    var tableRow = document.createElement('tr')
+    //add table cells to rows
+    for (j = 0; j < drafters; j++){
+     var tableCell = document.createElement('td');
+     tableCell.textContent = i + 1;
+     tableRow.appendChild(tableCell);
+    }
+   //add filled rows to table
+   table.appendChild(tableRow);
+  }
 //}
+
+$($inputBox).on('click', 'button', function(){
+  alert($inputBox.text());
+});
+
+
+
+
 
 //loops to verify drafters and rounds are positive integers
 function checkPositiveInt(x){

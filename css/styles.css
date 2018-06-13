@@ -1,0 +1,19 @@
+.bannerContainer {
+  background-color: green;
+  justify-content: space-between;
+}
+
+.mainHeader {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  background-color: blue;
+  width: 80%;
+}
+
+#submitCard {
+ height: 1em;
+}

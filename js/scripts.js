@@ -1,10 +1,16 @@
 //function tableCreate(){
   //calls in html body
   var body = document.getElementsByTagName('body');
+//test code, test standard 4x4 table
+  var drafters = 4;
+  var rounds = 4;
   //calls in number of drafters and rounds
-  var drafters = checkPositiveInt(prompt('How many drafters?'));
-  var rounds = checkPositiveInt(prompt('How many rounds?'));
+  //var drafters = checkPositiveInt(prompt('How many drafters?'));
+  //var rounds = checkPositiveInt(prompt('How many rounds?'));
+
+// variables to read and edit JQuery DOM elements
   var $inputBox = $('#inputBox');
+  var $submitCard = $('#submitCard');
 //  window.alert('You have initiated a draft table with '+ drafters + ' and ' + rounds + ' rounds!');
   const tableHeadCreate = document.createElement('th');
   var arrayCounter;
@@ -31,7 +37,20 @@
 //}
 
 $($inputBox).on('click', 'button', function(){
-  alert($inputBox.text());
+  // alert($submitCard.val());
+  var tableArray = $('td').toArray();
+  for(var i = 0; i < tableArray.length; i++){
+
+    // non working code trying to add to table
+
+
+  //  var $cellContent = tableArray[i].val();
+  //  console.log($cellContent);
+    // if($cellContent.isNaN() === false){
+    //   console.log($tableArray[i]);
+    // }
+  };
+  $tableArray[0].textContent = $submitCard.val();
 });
 
 

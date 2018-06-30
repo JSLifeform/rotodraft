@@ -43,14 +43,14 @@ $($inputBox).on('click', 'button', function(){
 
     // non working code trying to add to table
 
-
-  //  var $cellContent = tableArray[i].val();
-  //  console.log($cellContent);
+   //
+   var $cellContent = tableArray[i].textContent;
+   console.log($cellContent);
     // if($cellContent.isNaN() === false){
-    //   console.log($tableArray[i]);
-    // }
+    //   console.log(tableArray[i]);
+    //  }
   };
-  $tableArray[0].textContent = $submitCard.val();
+  tableArray[0].textContent = $submitCard.val();
 });
 
 

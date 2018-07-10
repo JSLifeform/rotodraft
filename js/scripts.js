@@ -44,13 +44,25 @@ $($inputBox).on('click', 'button', function(){
     // non working code trying to add to table
 
    //
-   var $cellContent = tableArray[i].textContent;
-   console.log($cellContent);
+   var $cellContent = parseInt(tableArray[i].innerText);
+   if (Number.isInteger($cellContent) === true){
+    tableArray[i].innerText = $submitCard.val();
+    //console.log(tableArray[0].innerText);
+    break;
+
+    // test code, what to do if not reading $cellContent as integer
+  } else {
+    console.log(tableArray[i].innerText);
+  }
+
+
+
+   // console.log($cellContent);
     // if($cellContent.isNaN() === false){
     //   console.log(tableArray[i]);
     //  }
   };
-  tableArray[0].textContent = $submitCard.val();
+
 });
 
 

@@ -4,16 +4,44 @@
 }
 
 .mainHeader {
-  background-color: grey;
+  background-color: aqua;
   display: flex;
   justify-content: space-between;
 }
 
 .headerTitle {
+  height: 10%;
   background-color: blue;
   width: 80%;
 }
 
 #submitCard {
  height: 1em;
+}
+
+table {
+  table-layout: fixed;
+  word-wrap:break-word;
+  text-align: center;
+}
+
+body {
+  background-color: cyan;
+}
+@media only screen and (max-width: 768px){
+  /* for mobile*/
+  table {
+    overflow-x: auto;
+    overflow-y: auto;
+    width: auto;
+    width-max: 180px;
+  }
+
+  td {
+    width: auto;
+    min-width: 100px;
+  }
+  .headerTitle{
+    display: none;
+  }
 }

@@ -36,11 +36,12 @@ body {
     width: auto;
     width-max: 180px;
   }
-
+/* set minimum cell size */
   td {
     width: auto;
     min-width: 100px;
   }
+  /*removes title*/
   .headerTitle{
     display: none;
   }

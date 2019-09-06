@@ -21,17 +21,18 @@
     creates text box to input cards into data table->
    <header class = "mainHeader">
      <h1 class = "headerTitle">Rotisserie Cube Draft</h1>
-     <div id = 'inputBox'>
+     <form id = 'inputBox'>
       <label>Enter card name here:</label>
       <input type = 'text' id = 'submitCard'></input>
       <button type = 'submit'>Submit</button>
-     </div>
+     </form>
+     <button id = 'importButton'>Import Cards</button>
    </header>
  </div>
  <!- creates and labels empty table, cells will be generated via JavaScript->
   <table id='draftTable' border = '1px' width = '100%'></table>
 <!- load jquery and local scripts file->
   <script src = 'js/jquery-3.3.1.min.js'></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts2.js"></script>
 </body>
 </html>
